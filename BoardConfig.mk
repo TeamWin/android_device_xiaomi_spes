@@ -67,6 +67,12 @@ BOARD_TAGS_OFFSET := 0x00000100
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
+# Prebuilt
+TARGET_FORCE_PREBUILT_KERNEL := true
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
+
 BOARD_KERNEL_CMDLINE += \
     androidboot.console=ttyMSM0 \
     androidboot.fstab_suffix=qcom \
